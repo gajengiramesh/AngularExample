@@ -1,0 +1,14 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" >
+  <table>
+      <tr><td><span>Login Name : </span></td><td><input type="text" name="loginNameControl"  class="form-control" required [(ngModel)]="loginName" #loginNameControl="ngModel"></td><td>   <div *ngIf="loginNameControl.invalid && (loginNameControl.dirty || loginNameControl.touched )"
+          class="alert alert-danger"> <div *ngIf="loginNameControl.errors.required">
+              Name is required.
+            </div></div></td></tr>
+      <tr><td><span>Password : </span></td><td><input type="password" name="loginPasswordControl" class="form-control" required [(ngModel)]="loginPassword" #loginPasswordControl="ngModel" ></td><td>   <div *ngIf="loginPasswordControl.invalid && (loginPasswordControl.dirty || loginPasswordControl.touched)"
+          class="alert alert-danger"> <div *ngIf="loginPasswordControl.errors.required">
+              Password is required.
+            </div></div></td></tr>
+  <tr><td></td><td><button type="submit" [disabled]="f.invalid">Login</button></td></tr>
+  <!-- <tr><td></td><td><button type="submit" >Login</button></td></tr> -->
+</table>
+</form>
