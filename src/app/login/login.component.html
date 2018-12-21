@@ -8,7 +8,7 @@
             class="alert alert-danger"> <div *ngIf="loginPasswordControl.errors.required">
                 Password is required.
               </div></div></td></tr>
-    <tr><td></td><td><button type="submit" [disabled]="loginForm.invalid">Login</button></td></tr>
-    <!-- <tr><td></td><td><button type="submit" >Login</button></td></tr> -->
+    <!-- <tr><td></td><td><button type="submit" [disabled]="loginForm.invalid">Login</button></td></tr> -->
+    <tr><td></td><td><button type="submit" [disabled]="isSubmitted">Login</button></td></tr>
 </table>
 </form>

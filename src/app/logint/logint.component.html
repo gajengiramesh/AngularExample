@@ -1,6 +1,6 @@
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" >
   <table>
-      <tr><td><span>Login Name : </span></td><td><input type="text" name="loginNameControl"  class="form-control" required [(ngModel)]="loginName" #loginNameControl="ngModel"></td><td>   <div *ngIf="loginNameControl.invalid && (loginNameControl.dirty || loginNameControl.touched )"
+      <tr><td><span>Logint Name : </span></td><td><input type="text" name="loginNameControl"  class="form-control" required [(ngModel)]="loginName" #loginNameControl="ngModel"></td><td>   <div *ngIf="loginNameControl.invalid && (loginNameControl.dirty || loginNameControl.touched )"
           class="alert alert-danger"> <div *ngIf="loginNameControl.errors.required">
               Name is required.
             </div></div></td></tr>
